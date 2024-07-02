@@ -1,0 +1,43 @@
+spring:
+  messages:
+    encoding: UTF-8
+
+  jpa:
+    database: mysql
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+
+  datasource:
+    hikari:
+      maximum-pool-size: 4
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+
+oauth:
+  kakao:
+    public-key-info: https://kauth.kakao.com/.well-known/jwks.json
+#  apple:
+#    public-key-url: https://appleid.apple.com/auth/keys
+  google:
+    client-id: ${GOOGLE_OAUTH_CLIENT_ID}
+jwt:
+  secret-key: ${JWT_SECRET_KEY}
+  access-expired-time: 25920000
+  refresh-expired-time: 2592000000
+  access-header: Authorization
+  refresh-header: Refresh
+  grant-type: Bearer
+  userKey : USER
