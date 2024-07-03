@@ -206,6 +206,5 @@ gradle-app.setting
 # End of https://www.toptal.com/developers/gitignore/api/macos,intellij,java,gradle
 HELP.md
 
-Dockerfile
 
 run
