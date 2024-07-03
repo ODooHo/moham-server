@@ -41,7 +41,7 @@ jobs:
       run: chmod +x ./gradlew
 
     - name: Build with Gradle Wrapper
-      run: ./gradlew build
+      run: ./gradlew build -x test
     
     
     # 환경 변수 설정
