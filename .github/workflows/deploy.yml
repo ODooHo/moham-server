@@ -57,6 +57,15 @@ jobs:
       with:
         arguments: clean build -x test
 
+    # Docker build
+    - name: Docker build
+      run: |
+        docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_PASSWORD }}
+        docker buildx build --push --platform linux/amd64 -t dhengh0205/moham .
+        docker tag moham dhengh0205/moham:${GITHUB_SHA::7}
+        docker push dhengh0205/moham:${GITHUB_SHA::7}
+
+
     # NOTE: The Gradle Wrapper is the default and recommended way to run Gradle (https://docs.gradle.org/current/userguide/gradle_wrapper.html).
     # If your project does not have the Gradle Wrapper configured, you can use the following configuration to run Gradle with a specified version.
     #
