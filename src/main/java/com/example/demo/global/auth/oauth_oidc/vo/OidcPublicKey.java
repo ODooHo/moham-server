@@ -7,11 +7,11 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class OidcPublicKey{
-        String kid;
-        String kty;
-        String alg;
-        String use;
-        String n;
-        String e;
+public class OidcPublicKey {
+    private String kid;
+    private String kty;
+    private String alg;
+    private String use;
+    private String n;
+    private String e;
 }

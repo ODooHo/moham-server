@@ -6,8 +6,8 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public class ReissueDto {
-    String accessToken;
-    String refreshToken;
+    private String accessToken;
+    private String refreshToken;
 
 
 

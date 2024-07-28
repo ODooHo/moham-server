@@ -6,9 +6,9 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public class InfoResponse {
-    String email;
-    String username;
-    String nickname;
+    private String email;
+    private String username;
+    private String nickname;
 
 
     public static InfoResponse of(String email, String username, String nickname){

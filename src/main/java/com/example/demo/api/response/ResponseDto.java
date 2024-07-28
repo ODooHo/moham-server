@@ -3,7 +3,6 @@ package com.example.demo.api.response;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-@Getter
 @AllArgsConstructor
 public class ResponseDto <T>{
 

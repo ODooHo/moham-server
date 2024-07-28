@@ -5,7 +5,7 @@ import lombok.Getter;
 
 @Getter
 public class SignInRequest {
-    Provider provider;
-    String idToken;
+    private Provider provider;
+    private String idToken;
 }
 

@@ -5,8 +5,8 @@ import lombok.Getter;
 
 @Getter
 public class SignUpRequest {
-    Provider provider;
-    String idToken;
-    String username;
-    String nickname;
+    private Provider provider;
+    private String idToken;
+    private String username;
+    private String nickname;
 }

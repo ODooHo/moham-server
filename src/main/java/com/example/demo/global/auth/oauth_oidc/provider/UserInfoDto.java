@@ -6,10 +6,10 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public class UserInfoDto {
-        String providerId;
-        String email;
+    private String providerId;
+    private String email;
 
-    public static UserInfoDto of(String providerId, String email){
-        return new UserInfoDto(providerId,email);
+    public static UserInfoDto of(String providerId, String email) {
+        return new UserInfoDto(providerId, email);
     }
 }

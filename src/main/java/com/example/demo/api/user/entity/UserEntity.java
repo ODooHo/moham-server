@@ -3,6 +3,7 @@ package com.example.demo.api.user.entity;
 import com.example.demo.api.user.UserRole;
 import com.example.demo.global.auth.oauth_oidc.provider.Provider;
 import jakarta.persistence.*;
+import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,7 +16,7 @@ import javax.annotation.Nullable;
 @Getter
 @Entity
 @NoArgsConstructor
-@AllArgsConstructor
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

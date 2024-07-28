@@ -8,8 +8,7 @@ import lombok.*;
 @ToString
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class UserDto {
     private Provider provider;
     private String providerId;
